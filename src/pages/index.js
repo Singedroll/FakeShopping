@@ -1,8 +1,7 @@
-import { Navbar } from "@/components/Navbar";
 import Link from "next/link";
 import { useState } from "react";
 import useSWR from "swr";
-import Card from "./[category]";
+
 import { useQueryState } from "nuqs";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());

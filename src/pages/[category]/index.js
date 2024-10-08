@@ -11,7 +11,6 @@ const Card = () => {
 
   const url = `https://fakestoreapi.com/products/category/${category}`;
   const { data: products, error, isLoading } = useSWR(url, fetcher);
-  console.log(products);
 
   if (error) return null;
 
