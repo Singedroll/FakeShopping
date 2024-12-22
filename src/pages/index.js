@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { useState } from "react";
 import useSWR from "swr";
 
 import { useQueryState } from "nuqs";
+import Image from "next/image";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -31,10 +31,8 @@ const Page = () => {
         <div className="grid grid-cols-3 mt-20 gap-10 bg-base-100 shadow-xl cursor-pointer card ">
           {filteredProducts.map((blog) => {
             return (
-              <Link href={`products/${blog.id}`}>
+              <Link key={blog.id} href={`products/${blog.id}`}>
                 <Home
-                  // seSelectedTag={seSelectedTag}
-                  key={blog.id}
                   image={blog.image}
                   title={blog.title}
                   category={blog.category}
@@ -54,7 +52,7 @@ const Home = (props) => {
   return (
     <div className="card bg-base-100 w-[100%] h-[500px] shadow-xl place-items-center">
       <figure>
-        <img src={image} />
+        <Image alt="" src={image} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>

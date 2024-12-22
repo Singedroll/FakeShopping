@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const Img = () => {
-  return <img className="w-10 h-10" src="shopping.png" />;
+  return <Image src="shopping.png" alt="" width={10} height={10} />;
 };

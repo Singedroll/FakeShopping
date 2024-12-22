@@ -2,6 +2,7 @@ import Link from "next/link";
 import useSWR from "swr";
 
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -21,7 +22,7 @@ const Card = () => {
       <div className="grid grid-cols-3 mt-20 gap-10 bg-base-100 shadow-xl cursor-pointer card ">
         {products.map((blog) => {
           return (
-            <Link href={`products/${blog.id}`}>
+            <Link key={blog.id} href={`products/${blog.id}`}>
               <Home
                 // seSelectedTag={seSelectedTag}
                 key={blog.id}
@@ -44,7 +45,7 @@ const Home = (props) => {
   return (
     <div className="card bg-base-100 w-[100%] h-[500px] shadow-xl place-items-center">
       <figure>
-        <img src={image} />
+        <Image src={image} alt="" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>

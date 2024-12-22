@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import useSWR from "swr";
@@ -36,7 +37,7 @@ const Slide = (props) => {
     "
     >
       <figure className="flex-1 py-10 mx-[200px] ">
-        <img src={image} />
+        <Image alt="" src={image} />
       </figure>
       <div className="card-body flex-1 py-8 bg-gray-100">
         <h2 className="card-title ">{title}</h2>

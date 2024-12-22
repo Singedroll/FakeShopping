@@ -25,9 +25,9 @@ export const Navbar = () => {
       <Link href={`/`}>
         <h1 className="px-4 py-2 text-xl font-bold cursor-pointer">Store</h1>
       </Link>
-      {categories.map((category) => {
+      {categories.map((category, index) => {
         return (
-          <Link href={`/${category}`}>
+          <Link key={index} href={`/${category}`}>
             <div className=" bg-base-100 flex ml-5">{category}</div>
           </Link>
         );
@@ -59,14 +59,3 @@ export const Navbar = () => {
     </div>
   );
 };
-
-// const Header = (props) => {
-//   const { text } = props;
-//   return (
-//     <div>
-//       <div className="navbar bg-base-100">
-//         <a className="btn btn-ghost text-xl">{text}</a>
-//       </div>
-//     </div>
-//   );
-// };
