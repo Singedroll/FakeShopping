@@ -37,7 +37,7 @@ const Slide = (props) => {
     "
     >
       <figure className="flex-1 py-10 mx-[200px] ">
-        <Image alt="" src={image} />
+        <Image alt="image" src={image} width={500} height={350} />
       </figure>
       <div className="card-body flex-1 py-8 bg-gray-100">
         <h2 className="card-title ">{title}</h2>

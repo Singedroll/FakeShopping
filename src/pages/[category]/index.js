@@ -45,7 +45,7 @@ const Home = (props) => {
   return (
     <div className="card bg-base-100 w-[100%] h-[500px] shadow-xl place-items-center">
       <figure>
-        <Image src={image} alt="" />
+        <Image src={image} alt="image" width={500} height={350} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>

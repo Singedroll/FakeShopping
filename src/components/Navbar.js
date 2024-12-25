@@ -23,16 +23,18 @@ export const Navbar = () => {
   return (
     <div className="flex items-center p-10">
       <Link href={`/`}>
-        <h1 className="px-4 py-2 text-xl font-bold cursor-pointer">Store</h1>
+        <h1 className="px-4 py-2 text-4xl font-extrabold cursor-pointer">
+          Store
+        </h1>
       </Link>
       {categories.map((category, index) => {
         return (
           <Link key={index} href={`/${category}`}>
-            <div className=" bg-base-100 flex ml-5">{category}</div>
+            <div className=" bg-base-100 flex text-2xl ml-5">{category}</div>
           </Link>
         );
       })}
-      <label className="input input-bordered flex items-center gap-2 ml-auto">
+      <label className="input input-bordered flex items-center gap-2 ml-auto ">
         <input
           value={search}
           onChange={handleChange}
